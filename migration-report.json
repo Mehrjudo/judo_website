@@ -1,11 +1,6 @@
 {
   "total": 322,
-  "written": 321,
-  "failed": [
-    {
-      "url": "https://www.psv-judo.at/bericht/2025/gemeinsame-faschingsfeier-fuer-die-kinder/",
-      "error": "fetch failed"
-    }
-  ],
+  "written": 322,
+  "failed": [],
   "noDateMatch": []
 }
