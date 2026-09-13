@@ -1,0 +1,14 @@
+{
+  "name": "psv-judo-migration",
+  "version": "1.0.0",
+  "description": "Scrapes psv-judo.at public content into date/category-classified MDX files for a Next.js migration",
+  "type": "module",
+  "main": "scrape.js",
+  "scripts": {
+    "scrape": "node scrape.js",
+    "dry-run": "node scrape.js --dry-run"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

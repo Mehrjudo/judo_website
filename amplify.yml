@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd next-app && npm ci
+        - cd next-app && node scripts/copy-images.js
+    build:
+      commands:
+        - cd next-app && npm run build
+  artifacts:
+    baseDirectory: next-app/out
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - next-app/node_modules/**/*
