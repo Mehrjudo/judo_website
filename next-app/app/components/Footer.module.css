@@ -1,0 +1,22 @@
+.footer { background: var(--surface); border-top: 1px solid var(--border); margin-top: 80px; }
+.inner { display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 48px; padding-top: 64px; padding-bottom: 64px; }
+.logo { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.logoMark { font-size: 28px; }
+.logoTop { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+.logoBottom { font-size: 1.2rem; font-weight: 900; letter-spacing: 0.05em; color: var(--text); }
+.tagline { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px; }
+.social { display: flex; gap: 12px; }
+.social a { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--card); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: color 0.2s, border-color 0.2s, background 0.2s; }
+.social a:hover { color: var(--text); border-color: var(--primary); background: var(--primary-dim); }
+.colTitle { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+.links { display: flex; flex-direction: column; gap: 10px; }
+.links li, .links a { font-size: 0.9rem; color: var(--text-dim); transition: color 0.2s; line-height: 1.5; }
+.links a:hover { color: var(--text); }
+.cta { display: inline-flex; margin-top: 20px; font-size: 0.875rem; padding: 10px 20px; }
+.bottom { border-top: 1px solid var(--border); padding: 20px 0; }
+.bottom .container { display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; color: var(--text-dim); gap: 16px; flex-wrap: wrap; }
+.bottom a { color: var(--text-dim); transition: color 0.2s; }
+.bottom a:hover { color: var(--text); }
+@media (max-width: 768px) { .inner { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; padding-bottom: 40px; } .bottom .container { flex-direction: column; text-align: center; } }
+.logoImg { height: 42px; width: auto; object-fit: contain; border-radius: 4px; }
+.logoTextWrapper { text-align: right; }

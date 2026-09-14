@@ -1,0 +1,27 @@
+.controls { display: flex; flex-direction: column; gap: 16px; padding: 32px 0 24px; }
+.searchWrap { position: relative; max-width: 560px; }
+.searchIcon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-dim); pointer-events: none; }
+.searchInput { width: 100%; padding: 14px 44px 14px 48px; background: var(--card); border: 1px solid var(--border-bright); border-radius: 50px; color: var(--text); font-family: inherit; font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; }
+.searchInput:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-dim); }
+.searchInput::placeholder { color: var(--text-dim); }
+.clearBtn { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 0.85rem; padding: 4px 8px; border-radius: var(--radius-sm); transition: color 0.2s, background 0.2s; }
+.clearBtn:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+.yearFilter { display: flex; flex-wrap: wrap; gap: 8px; }
+.yearBtn { padding: 8px 18px; border-radius: 50px; font-size: 0.875rem; font-weight: 600; color: var(--text-muted); border: 1px solid var(--border); background: var(--card); transition: all 0.2s ease; }
+.yearBtn:hover { border-color: var(--primary); color: var(--primary); }
+.yearActive { background: var(--primary) !important; border-color: var(--primary) !important; color: #fff !important; }
+.resultCount { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 24px; font-weight: 500; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-bottom: 48px; }
+.empty { text-align: center; padding: 80px 24px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.empty span { font-size: 3rem; }
+.empty p { color: var(--text-muted); font-size: 1.05rem; }
+.pagination { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 32px 0 64px; flex-wrap: wrap; }
+.pageBtn { padding: 10px 20px; border-radius: 50px; border: 1px solid var(--border-bright); background: var(--card); color: var(--text-muted); font-size: 0.875rem; font-weight: 600; transition: all 0.2s ease; }
+.pageBtn:hover:not(.pageBtnDisabled) { border-color: var(--primary); color: var(--primary); }
+.pageBtnDisabled { opacity: 0.3; cursor: not-allowed; }
+.pageNums { display: flex; gap: 6px; }
+.pageNum { width: 40px; height: 40px; border-radius: 50%; border: 1px solid transparent; background: transparent; color: var(--text-muted); font-size: 0.875rem; font-weight: 600; transition: all 0.2s ease; }
+.pageNum:hover { border-color: var(--border-bright); color: var(--text); }
+.pageNumActive { background: var(--primary) !important; color: #fff !important; border-color: var(--primary) !important; }
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } .searchWrap { max-width: 100%; } .pageNums { display: none; } }

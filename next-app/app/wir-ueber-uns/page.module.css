@@ -1,0 +1,23 @@
+.intro { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: start; }
+.introStats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 32px; min-width: 240px; }
+.introStat { text-align: center; }
+.introNum { display: block; font-size: 2rem; font-weight: 900; color: var(--primary); letter-spacing: -0.03em; }
+.introLabel { display: block; font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+.valuesGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.valueCard { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.2s, transform 0.2s; }
+.valueCard:hover { border-color: var(--primary); transform: translateY(-3px); }
+.valueIcon { font-size: 2rem; }
+.valueTitle { font-size: 1rem; font-weight: 800; color: var(--text); }
+.valueText { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
+.trainersGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.trainerCard { display: flex; align-items: center; gap: 16px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px 20px; transition: border-color 0.2s; }
+.trainerCard:hover { border-color: var(--border-bright); }
+.trainerAvatar { width: 46px; height: 46px; border-radius: 50%; background: var(--primary-dim); border: 2px solid var(--primary); color: var(--primary); font-size: 0.9rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; letter-spacing: 0.05em; }
+.trainerName { font-weight: 700; color: var(--text); font-size: 0.95rem; }
+.trainerRole { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
+.trainerDay { font-size: 0.75rem; color: var(--text-dim); margin-top: 2px; }
+.contact { margin-top: 48px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; }
+.contact h3 { font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+.contact p { font-size: 0.9rem; color: var(--text-muted); line-height: 2; }
+@media (max-width: 900px) { .intro { grid-template-columns: 1fr; } .introStats { min-width: 0; } .valuesGrid { grid-template-columns: repeat(2, 1fr); } .trainersGrid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .valuesGrid { grid-template-columns: 1fr; } }

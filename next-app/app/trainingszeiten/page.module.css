@@ -1,0 +1,13 @@
+.wrapper { display: flex; flex-direction: column; gap: 24px; padding-bottom: 80px; }
+.dayCard { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+.dayTitle { display: flex; align-items: center; gap: 12px; padding: 20px 24px; font-size: 1.1rem; font-weight: 800; color: var(--text); background: var(--surface); border-bottom: 1px solid var(--border); letter-spacing: -0.01em; }
+.dayBullet { width: 10px; height: 10px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
+.detail { display: inline-block; font-size: 0.78rem; color: var(--text-dim); font-weight: 400; margin-left: 4px; }
+.tableWrap { overflow-x: auto; }
+.ferienCard { border-color: rgba(212, 175, 55, 0.3); }
+.ferienNote { padding: 16px 24px; font-size: 0.875rem; color: var(--text-muted); border-bottom: 1px solid var(--border); line-height: 1.7; }
+.ferienNote strong { color: var(--text); }
+.infoBox { display: flex; align-items: flex-start; gap: 16px; padding: 24px; background: var(--primary-dim); border: 1px solid rgba(200, 16, 46, 0.2); border-radius: var(--radius-lg); }
+.infoIcon { font-size: 1.5rem; flex-shrink: 0; }
+.infoBox strong { color: var(--text); font-weight: 700; display: block; margin-bottom: 4px; }
+.infoBox p { font-size: 0.9rem; color: var(--text-muted); }
