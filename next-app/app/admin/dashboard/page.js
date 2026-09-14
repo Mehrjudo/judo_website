@@ -355,7 +355,7 @@ export default function AdminDashboard() {
 
               <div className={styles.inputGroup}>
                 <label className={styles.label}>Excerpt</label>
-                <ReactQuill theme="snow" value={newsForm.excerpt} onChange={(val) => setNewsForm(prev => ({ ...prev, excerpt: val }))} style={{ backgroundColor: '#fff', color: '#000', borderRadius: '4px' }} />
+                <textarea name="excerpt" required className={styles.textarea} value={newsForm.excerpt} onChange={handleNewsChange} placeholder="Kurze Zusammenfassung..."></textarea>
               </div>
 
               <div className={styles.inputGroup}>
