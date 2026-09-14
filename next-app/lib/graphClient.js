@@ -4,14 +4,14 @@ import 'isomorphic-fetch';
 
 const msalConfig = {
   auth: {
-    clientId: process.env.AZURE_CLIENT_ID,
+    clientId: process.env.MSAL_CLIENT_ID,
     authority: 'https://login.microsoftonline.com/common', 
   }
 };
 
 let msalClient;
 try {
-  if (process.env.AZURE_CLIENT_ID && process.env.ONEDRIVE_REFRESH_TOKEN) {
+  if (process.env.MSAL_CLIENT_ID && process.env.ONEDRIVE_REFRESH_TOKEN) {
     msalClient = new PublicClientApplication(msalConfig);
   }
 } catch (e) {
@@ -20,7 +20,7 @@ try {
 
 export const authProvider = {
   getAccessToken: async () => {
-    if (!msalClient) throw new Error('MSAL not configured. Missing ENV variables (AZURE_CLIENT_ID or ONEDRIVE_REFRESH_TOKEN).');
+    if (!msalClient) throw new Error('MSAL not configured. Missing ENV variables (MSAL_CLIENT_ID or ONEDRIVE_REFRESH_TOKEN).');
     
     // Acquire a new token using the refresh token
     const result = await msalClient.acquireTokenByRefreshToken({
@@ -43,7 +43,7 @@ if (msalClient) {
 }
 export const getGraphClient = () => {
   if (!graphClient) {
-    throw new Error('Graph client is not initialized. Please ensure AZURE_CLIENT_ID and ONEDRIVE_REFRESH_TOKEN are set in environment variables.');
+    throw new Error('Graph client is not initialized. Please ensure MSAL_CLIENT_ID and ONEDRIVE_REFRESH_TOKEN are set in environment variables.');
   }
   return graphClient;
 };

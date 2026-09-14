@@ -13,7 +13,7 @@ dotenv.config({ path: path.join(rootDir, '.env.local') });
 // Since it's for personal accounts, we use the common authority.
 const msalConfig = {
   auth: {
-    clientId: process.env.AZURE_CLIENT_ID,
+    clientId: process.env.MSAL_CLIENT_ID,
     authority: 'https://login.microsoftonline.com/common', 
   }
 };
