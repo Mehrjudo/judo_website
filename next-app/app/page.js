@@ -14,14 +14,7 @@ export default async function HomePage() {
   const allArticles = await getAllArticles();
   const latestFive = allArticles.slice(0, 5);
 
-  const quickLinks = [
-    { href: '/gratis-schnuppern/',    icon: '🥋', label: 'Gratis Schnuppern',   sub: 'Ab 28. September 2026' },
-    { href: '/trainingszeiten/',      icon: '📅', label: 'Trainingszeiten',     sub: 'Herbst 2026' },
-    { href: '/berichte/',             icon: '📰', label: 'Berichte',            sub: `${allArticles.length} Beiträge` },
-    { href: '/ligen/',                icon: '🏆', label: 'Ligen',               sub: 'Wettkampf & Bundesliga' },
-    { href: '/wir-ueber-uns/',        icon: '👥', label: 'Wir über uns',        sub: 'Geschichte & Team' },
-    { href: '/unsere-unterstuetzer/', icon: '🤝', label: 'Unterstützer',        sub: 'Unsere Partner' },
-  ];
+
 
   return (
     <>
@@ -72,23 +65,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Quick links */}
-      <section className="section-sm">
-        <div className="container">
-          <div className="divider" />
-          <h2 className="section-title">Schnellzugriff</h2>
-          <p style={{ marginBottom: 36, color: 'var(--text-muted)', marginTop: 8 }}>Alles rund um den PSV Salzburg Judo</p>
-          <div className={styles.quickGrid}>
-            {quickLinks.map(({ href, icon, label, sub }) => (
-              <Link key={href} href={href} className={styles.quickCard}>
-                <span className={styles.quickIcon}>{icon}</span>
-                <span className={styles.quickLabel}>{label}</span>
-                <span className={styles.quickSub}>{sub}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* 3 more recent articles */}
       <section className="section">
