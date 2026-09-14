@@ -1,4 +1,5 @@
 import { getAllArticles } from '../../lib/news';
+export const dynamic = 'force-dynamic';
 import NewsGrid from './NewsGrid';
 
 export const metadata = {

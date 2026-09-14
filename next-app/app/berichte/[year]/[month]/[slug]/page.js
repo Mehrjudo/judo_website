@@ -1,13 +1,11 @@
 import { getAllArticles, getArticleBySlug } from '../../../../../lib/news';
+export const dynamic = 'force-dynamic';
 import { formatDate } from '../../../../../lib/utils';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 
-export async function generateStaticParams() {
-  const articles = await getAllArticles();
-  return articles.map(a => ({ year: a.year, month: a.month, slug: a.slug }));
-}
+
 
 export async function generateMetadata({ params }) {
   const article = await getArticleBySlug(params.year, params.month, params.slug);

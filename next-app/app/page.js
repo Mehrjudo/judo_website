@@ -1,4 +1,5 @@
 import Link from 'next/link';
+export const dynamic = 'force-dynamic';
 import { getAllArticles } from '../lib/news';
 import { formatDate } from '../lib/utils';
 import NewsCarousel from './components/NewsCarousel';

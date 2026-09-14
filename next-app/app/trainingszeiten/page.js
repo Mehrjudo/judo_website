@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+export const dynamic = 'force-dynamic';
 import { getJsonFromOneDrive } from '@/lib/graphClient';
 
 export const metadata = { title: 'Trainingszeiten', description: 'Trainingszeiten des PSV Salzburg Judo.' };

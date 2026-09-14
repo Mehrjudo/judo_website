@@ -1,4 +1,5 @@
 import GratiSchnuppernClient from './GratiSchnuppernClient';
+export const dynamic = 'force-dynamic';
 import { getJsonFromOneDrive } from '@/lib/graphClient';
 
 export const metadata = {
